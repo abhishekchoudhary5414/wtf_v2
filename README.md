@@ -88,18 +88,3 @@ npm run dev
 
 ---
 
-## 🔐 Environment Variables (`backend/.env`)
-
-| Variable | Description | Default / Example |
-| :--- | :--- | :--- |
-| `DATABASE_URL` | PostgreSQL connection URL with psycopg driver | `postgresql+psycopg://postgres:postgres@localhost:5432/wtf_db` |
-| `SECRET_KEY` | Hex secret key for signing JWT tokens | `be2e1978d71133ebff52055ac492...` |
-| `ALGORITHM` | JWT signing algorithm | `HS256` |
-| `ACCESS_TOKEN_EXPIRE_MINUTES` | Expiration time for access tokens | `60` |
-| `FRONTEND_BASE_URL` | CORS allowed origin and email redirect base URL | `http://localhost:3000` |
-| `SMTP_HOST` | SMTP server address | `smtp.gmail.com` |
-| `SMTP_PORT` | SMTP port (465 for SSL) | `465` |
-| `SMTP_USERNAME` | SMTP account username | `workthroughfrustration@gmail.com` |
-| `SMTP_PASSWORD` | SMTP app password | `bbed tpwb glvk znyd` |
-| `SMTP_FROM` | From address for transactional emails | `workthroughfrustration@gmail.com3` |
-
