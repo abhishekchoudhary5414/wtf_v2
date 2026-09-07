@@ -52,3 +52,26 @@ class MsgResponse(BaseModel):
     message: str
     status: str = "success"
 
+class AdminLoginRequest(BaseModel):
+    email: EmailStr
+    password: str
+
+class AdminDetailsResponse(BaseModel):
+    id: int
+    role_id: int
+    first_name: str
+    last_name: Optional[str] = None
+    email_id: str
+    mobile_number: Optional[str] = None
+    profile_url: Optional[str] = None
+    is_live: bool
+    created_at: Optional[datetime] = None
+
+    model_config = ConfigDict(from_attributes=True)
+
+class AdminTokenResponse(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    expires_in: int
+    admin: Optional[AdminDetailsResponse] = None
+

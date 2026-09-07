@@ -1,16 +1,26 @@
 """
 FastAPI Application Entry Point.
 Initializes middleware, lifecycle events, and routes.
+Enforces JWT authentication across endpoints.
 """
 
+import sys
 import logging
+from pathlib import Path
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+# Ensure backend root is in sys.path so flyway_starter can be imported
+BACKEND_ROOT = Path(__file__).resolve().parent.parent
+if str(BACKEND_ROOT) not in sys.path:
+    sys.path.insert(0, str(BACKEND_ROOT))
+
 from app.config import settings
 from app.database import check_database_connection
-from app.flyway_starter import run_migrations
+from app.core.jwt_middleware import JWTMiddleware
 from app.api.v1 import api_v1_router
+from flyway_starter import run_migrations
 
 # Configure logging
 logging.basicConfig(
@@ -26,7 +36,7 @@ async def lifespan(app: FastAPI):
     Runs on startup and shutdown.
     """
     logger.info(f"Starting {settings.PROJECT_NAME} v{settings.VERSION}...")
-    
+
     # Check DB and attempt auto-migrations if database is reachable
     if check_database_connection():
         logger.info("PostgreSQL connection confirmed. Running Flyway database migrations...")
@@ -37,7 +47,7 @@ async def lifespan(app: FastAPI):
     else:
         logger.warning(
             "PostgreSQL is not currently reachable at DATABASE_URL. "
-            "Server starting in standby mode. Run 'python3 run_flyway.py' once PostgreSQL is online."
+            "Server starting in standby mode. Run 'python3 backend/flyway_starter/run.py' once PostgreSQL is online."
         )
 
     yield
@@ -68,6 +78,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Global JWT Authentication Middleware
+app.add_middleware(JWTMiddleware)
+
 # Include API Routers
 app.include_router(api_v1_router, prefix=settings.API_V1_STR)
 
@@ -79,6 +92,6 @@ def root():
         "docs": "/docs",
         "redoc": "/redoc",
         "health": f"{settings.API_V1_STR}/health",
+        "ping": f"{settings.API_V1_STR}/health/ping",
         "status": "online",
     }
-

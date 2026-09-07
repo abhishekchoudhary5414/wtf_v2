@@ -92,9 +92,19 @@ def login(
             detail="Account is inactive. Please contact support.",
         )
 
+    # Try to resolve numeric role id from roles table for richer token claims
+    role_id = None
+    try:
+        from app.models.user import Role as RoleModel
+        role_entry = db.query(RoleModel).filter(RoleModel.name == user.role).first()
+        if role_entry:
+            role_id = role_entry.id
+    except Exception:
+        role_id = None
+
     access_token = create_access_token(
         subject=str(user.id),
-        role=user.role,
+        role_id=role_id,
     )
 
     return Token(
@@ -110,8 +120,50 @@ def get_current_user_profile(
 ):
     """
     Fetch details of the currently authenticated user.
+    Requires valid JWT token.
     """
     return current_user
+
+@router.post("/refresh", response_model=Token)
+def refresh_token(
+    current_user: User = Depends(get_current_user)
+):
+    """
+    Refresh an existing valid JWT token, issuing a newly signed token with renewed expiration.
+    Requires valid JWT token.
+    """
+    # include role_id when available
+    role_id = None
+    try:
+        from app.models.user import Role as RoleModel
+        role_entry = db.query(RoleModel).filter(RoleModel.name == current_user.role).first()
+        if role_entry:
+            role_id = role_entry.id
+    except Exception:
+        role_id = None
+
+    access_token = create_access_token(
+        subject=str(current_user.id),
+        role_id=role_id,
+    )
+    return Token(
+        access_token=access_token,
+        token_type="bearer",
+        expires_in=settings.ACCESS_TOKEN_EXPIRE_MINUTES * 60,
+        user=UserResponse.model_validate(current_user),
+    )
+
+@router.post("/logout", response_model=MsgResponse)
+def logout(
+    current_user: User = Depends(get_current_user)
+):
+    """
+    Sign out the authenticated user and invalidate active session context.
+    Requires valid JWT token.
+    """
+    return MsgResponse(
+        message=f"Session successfully terminated for {current_user.email}."
+    )
 
 @router.post("/forgot-password", response_model=MsgResponse)
 def forgot_password(

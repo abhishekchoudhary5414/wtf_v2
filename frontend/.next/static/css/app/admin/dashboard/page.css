@@ -1,0 +1,1114 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/admin/dashboard/AdminDashboard.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/* ==========================================================================
+   Admin Dashboard Styles — 100% Fluid Width Layout
+   Full Responsiveness: Mobile (<640px), Tablet (640-1023px), Laptop (1024-1279px), Desktop (>=1280px)
+   Theme: Light-Green Mental & Behavioral Wellness SaaS Tokens
+   ========================================================================== */
+
+.AdminDashboard_layoutWrapper__KUfnQ {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Backdrop Overlay
+   -------------------------------------------------------------------------- */
+.AdminDashboard_backdrop__7D_6G {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 40, 26, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 990;
+  animation: AdminDashboard_fadeIn__I7wOC 0.25s ease-out;
+}
+
+@keyframes AdminDashboard_fadeIn__I7wOC {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   Fixed Left Sidebar
+   -------------------------------------------------------------------------- */
+.AdminDashboard_sidebar__lbspw {
+  width: 280px;
+  max-width: 85vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  overflow-y: auto;
+  box-shadow: var(--shadow-sm);
+  -webkit-overflow-scrolling: touch;
+}
+
+.AdminDashboard_sidebarClosed__gpRR2 {
+  transform: translateX(-100%);
+}
+
+/* Sidebar Header */
+.AdminDashboard_sidebarHeader__eyCmY {
+  height: 72px;
+  padding: 0 var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.AdminDashboard_brandLink__DFDwd {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+
+.AdminDashboard_brandLogoBadge__A5Qd4 {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary-subtle) 0%, var(--color-background-alt) 100%);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-xs);
+  flex-shrink: 0;
+}
+
+.AdminDashboard_brandTitles__VarqU {
+  display: flex;
+  flex-direction: column;
+}
+
+.AdminDashboard_brandName__VYrIM {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.AdminDashboard_brandSubtitle__iapwj {
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.AdminDashboard_closeSidebarBtn__w7cca {
+  background: none;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.AdminDashboard_closeSidebarBtn__w7cca:hover {
+  background: var(--color-danger-subtle);
+  color: var(--color-danger);
+  border-color: rgba(199, 54, 54, 0.2);
+}
+
+/* Sidebar User Profile Card */
+.AdminDashboard_sidebarUserProfile__rfsOp {
+  padding: var(--space-4);
+  margin: var(--space-4) var(--space-3) var(--space-2);
+  background: var(--color-primary-tint);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-xs);
+}
+
+.AdminDashboard_profileTopRow__vkac7 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.AdminDashboard_profileAvatarLarge__Jt9yO {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 2px 8px rgba(30, 112, 72, 0.25);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.AdminDashboard_onlineBadge__JHRmh {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success);
+  border: 2px solid var(--color-surface);
+}
+
+.AdminDashboard_profileDetails__uQ1mn {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.AdminDashboard_profileName__JoRjx {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AdminDashboard_profileRoleBadge__Y4_in {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 2px;
+  padding: 2px 8px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+}
+
+.AdminDashboard_profileEmail__EJfw9 {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--color-border);
+}
+
+/* Sidebar Navigation */
+.AdminDashboard_sidebarNav__qM0s9 {
+  flex: 1 1;
+  padding: var(--space-3) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.AdminDashboard_navCategoryTitle__dpLL0 {
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-3) var(--space-3) var(--space-1);
+}
+
+.AdminDashboard_sidebarNavItem__6tB_o {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 10px var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  min-height: 42px;
+}
+
+.AdminDashboard_sidebarNavItem__6tB_o:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-primary);
+}
+
+.AdminDashboard_sidebarNavItem__6tB_o.AdminDashboard_activeNav__8w77n {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  border-left: 3px solid var(--color-primary);
+}
+
+.AdminDashboard_navItemIcon__TYH6V {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Sidebar Footer */
+.AdminDashboard_sidebarFooter__NF8tD {
+  padding: var(--space-4) var(--space-4);
+  border-top: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.AdminDashboard_sidebarSignOutBtn__fJRUq {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 10px var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-danger);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-height: 42px;
+}
+
+.AdminDashboard_sidebarSignOutBtn__fJRUq:hover {
+  background: var(--color-danger-subtle);
+  border-color: rgba(199, 54, 54, 0.3);
+}
+
+.AdminDashboard_systemVersion___HW9x {
+  font-size: 11px;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Main Content Area (100% Fluid Width)
+   -------------------------------------------------------------------------- */
+.AdminDashboard_mainContentArea__AXUmy {
+  margin-left: 280px;
+  width: calc(100% - 280px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left var(--transition-smooth), width var(--transition-smooth);
+}
+
+.AdminDashboard_mainContentFullWidth__e4OQZ {
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Top Sticky Navigation Bar */
+.AdminDashboard_topBar__a5zMe {
+  height: 72px;
+  width: 100%;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-8);
+  box-shadow: var(--shadow-xs);
+  gap: var(--space-3);
+}
+
+.AdminDashboard_topBarLeft__khhwB {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  overflow: hidden;
+}
+
+.AdminDashboard_hamburgerBtn__aP6J_ {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.AdminDashboard_hamburgerBtn__aP6J_:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-primary);
+  border-color: var(--color-border-focus);
+}
+
+.AdminDashboard_breadcrumbGroup__i944Y {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.AdminDashboard_breadcrumbTitle__d_l0i {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AdminDashboard_breadcrumbSub__J9j0k {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AdminDashboard_topBarRight__RvA5Y {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.AdminDashboard_liveBadge__n741l {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 14px;
+  background: var(--color-success-bg);
+  border: 1px solid rgba(25, 135, 84, 0.2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-success);
+  white-space: nowrap;
+}
+
+.AdminDashboard_pulseDot__SOJ3v {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success);
+  box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.25);
+  animation: AdminDashboard_pulse__mCOyR 2s infinite;
+}
+
+@keyframes AdminDashboard_pulse__mCOyR {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(25, 135, 84, 0.4); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(25, 135, 84, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(25, 135, 84, 0); }
+}
+
+.AdminDashboard_topBarAdminChip__HNo6v {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 4px var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-hover);
+}
+
+.AdminDashboard_topBarAvatar__JFj5l {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xs);
+  flex-shrink: 0;
+}
+
+.AdminDashboard_topBarAdminText__HUTAo {
+  display: flex;
+  flex-direction: column;
+}
+
+.AdminDashboard_topBarAdminName__w4AfD {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-heading);
+  white-space: nowrap;
+}
+
+.AdminDashboard_topBarAdminRole__snhgU {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Fluid Content Body (100% Fluid Width)
+   -------------------------------------------------------------------------- */
+.AdminDashboard_fluidBody__UcF2f {
+  width: 100%;
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* Welcome Banner */
+.AdminDashboard_welcomeBanner__EX5kA {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-10);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.AdminDashboard_welcomeBanner__EX5kA::after {
+  content: '';
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 320px;
+  height: 320px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.AdminDashboard_welcomeText__B1acq h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.AdminDashboard_welcomeText__B1acq p {
+  font-size: var(--font-size-md);
+  opacity: 0.9;
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+.AdminDashboard_quickDate__gYl7i {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.15);
+  font-size: var(--font-size-xs);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+
+/* --------------------------------------------------------------------------
+   KPI Metric Cards Grid (Fluid 4/2/1)
+   -------------------------------------------------------------------------- */
+.AdminDashboard_kpiGrid__Jk_Bn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--space-5);
+  gap: var(--space-5);
+  width: 100%;
+}
+
+.AdminDashboard_kpiCard__EM6Pe {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.AdminDashboard_kpiCard__EM6Pe:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-focus);
+}
+
+.AdminDashboard_kpiTop__qh76q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.AdminDashboard_kpiLabel__ERIWx {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.AdminDashboard_kpiIconWrap__TRMvo {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.AdminDashboard_kpiIconWrap__TRMvo.AdminDashboard_green__hVmyS {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+}
+
+.AdminDashboard_kpiIconWrap__TRMvo.AdminDashboard_blue__1DlHh {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+}
+
+.AdminDashboard_kpiIconWrap__TRMvo.AdminDashboard_amber__sfZbk {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.AdminDashboard_kpiIconWrap__TRMvo.AdminDashboard_teal__ajZJV {
+  background: #e6f7f5;
+  color: #0d9488;
+}
+
+.AdminDashboard_kpiValue__3DKGf {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.AdminDashboard_kpiFooter__a7Af0 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.AdminDashboard_trendPositive__PcR8S {
+  color: var(--color-success);
+  font-weight: var(--font-weight-semibold);
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   System Diagnostics & Backend Health Panel (100% Fluid Width)
+   -------------------------------------------------------------------------- */
+.AdminDashboard_systemHealthSection__gcOOL {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-8);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+}
+
+.AdminDashboard_sectionHeader__3TFTA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.AdminDashboard_sectionTitle__844vA {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.AdminDashboard_sectionDesc__BxhbF {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.AdminDashboard_healthGrid__EQ8o4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--space-4);
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.AdminDashboard_healthItem__BQkAO {
+  padding: var(--space-4);
+  background: var(--color-background-soft);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.AdminDashboard_healthItemHeader__M0pmk {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.AdminDashboard_healthItemValue__kKT0w {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.AdminDashboard_healthTag__MTCCe {
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.AdminDashboard_tagSuccess__mq1iJ {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.AdminDashboard_tagNeutral__Wi1wf {
+  background: var(--color-secondary-subtle);
+  color: var(--color-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   User Management Table Section (100% Fluid Width)
+   -------------------------------------------------------------------------- */
+.AdminDashboard_tableSection__XUNmA {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  width: 100%;
+  overflow: hidden;
+}
+
+.AdminDashboard_tableHeaderBar__x6Ti8 {
+  padding: var(--space-6) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.AdminDashboard_tableControlsRight__oA17t {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.AdminDashboard_tableSearchBox__yl1ZL {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 12px;
+  background: var(--color-background-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  min-width: 200px;
+}
+
+.AdminDashboard_tableSearchBox__yl1ZL input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  width: 100%;
+  font-family: var(--font-sans);
+}
+
+.AdminDashboard_tableFilterTabs__HCLkH {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: 2px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.AdminDashboard_tabBtn__zKz8J {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  background: var(--color-background-soft);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.AdminDashboard_tabBtn__zKz8J:hover {
+  color: var(--color-text);
+  background: var(--color-surface-hover);
+}
+
+.AdminDashboard_tabBtn__zKz8J.AdminDashboard_activeTab__uQcky {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border-color: rgba(30, 112, 72, 0.2);
+}
+
+.AdminDashboard_tableContainer__b_qAh {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.AdminDashboard_userTable__cFV4x {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+}
+
+.AdminDashboard_userTable__cFV4x th {
+  background: var(--color-background-soft);
+  padding: 14px var(--space-6);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.AdminDashboard_userTable__cFV4x td {
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+.AdminDashboard_userTable__cFV4x tr:hover td {
+  background-color: var(--color-surface-hover);
+}
+
+.AdminDashboard_userNameCell__tH4LL {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.AdminDashboard_userAvatar__VwCMh {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  flex-shrink: 0;
+}
+
+.AdminDashboard_rolePill__DiTlB {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.AdminDashboard_roleStudent__Z4jwu {
+  background: var(--color-primary-tint);
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.AdminDashboard_roleCoach___kMtr {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.AdminDashboard_roleInstitution__nt7Vy {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+  border: 1px solid #bfdbfe;
+}
+
+.AdminDashboard_roleAdmin__bAQl9 {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.AdminDashboard_statusPill__ILkT9 {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-success);
+  white-space: nowrap;
+}
+
+.AdminDashboard_statusPillDot__W9rhn {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DEVICE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+
+/* LAPTOP BREAKPOINT (1024px to 1279px) */
+@media (max-width: 1279px) {
+  .AdminDashboard_kpiGrid__Jk_Bn {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .AdminDashboard_healthGrid__EQ8o4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .AdminDashboard_fluidBody__UcF2f {
+    padding: var(--space-6);
+    gap: var(--space-6);
+  }
+}
+
+/* TABLET BREAKPOINT (640px to 1023px) */
+@media (max-width: 1023px) {
+  .AdminDashboard_mainContentArea__AXUmy {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .AdminDashboard_sidebar__lbspw {
+    transform: translateX(-100%);
+    box-shadow: none;
+    z-index: 1000;
+  }
+
+  .AdminDashboard_sidebarMobileOpen__RlUJt {
+    transform: translateX(0) !important;
+    box-shadow: var(--shadow-xl) !important;
+  }
+
+  .AdminDashboard_topBar__a5zMe {
+    padding: 0 var(--space-5);
+  }
+
+  .AdminDashboard_fluidBody__UcF2f {
+    padding: var(--space-5);
+    gap: var(--space-6);
+  }
+
+  .AdminDashboard_welcomeBanner__EX5kA {
+    padding: var(--space-6);
+  }
+
+  .AdminDashboard_welcomeText__B1acq h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .AdminDashboard_topBarAdminRole__snhgU {
+    display: none;
+  }
+}
+
+/* MOBILE BREAKPOINT (< 640px) */
+@media (max-width: 639px) {
+  .AdminDashboard_topBar__a5zMe {
+    padding: 0 var(--space-3);
+    height: 64px;
+  }
+
+  .AdminDashboard_breadcrumbSub__J9j0k {
+    display: none;
+  }
+
+  .AdminDashboard_breadcrumbTitle__d_l0i {
+    font-size: var(--font-size-sm);
+  }
+
+  .AdminDashboard_liveBadge__n741l {
+    display: none;
+  }
+
+  .AdminDashboard_topBarAdminName__w4AfD {
+    display: none;
+  }
+
+  .AdminDashboard_topBarAdminChip__HNo6v {
+    padding: 3px;
+  }
+
+  .AdminDashboard_fluidBody__UcF2f {
+    padding: var(--space-3);
+    gap: var(--space-4);
+  }
+
+  .AdminDashboard_welcomeBanner__EX5kA {
+    padding: var(--space-4);
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--radius-lg);
+  }
+
+  .AdminDashboard_welcomeText__B1acq h1 {
+    font-size: var(--font-size-xl);
+  }
+
+  .AdminDashboard_welcomeText__B1acq p {
+    font-size: var(--font-size-sm);
+  }
+
+  .AdminDashboard_kpiGrid__Jk_Bn {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .AdminDashboard_kpiCard__EM6Pe {
+    padding: var(--space-4);
+  }
+
+  .AdminDashboard_kpiValue__3DKGf {
+    font-size: var(--font-size-2xl);
+  }
+
+  .AdminDashboard_systemHealthSection__gcOOL {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .AdminDashboard_healthGrid__EQ8o4 {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .AdminDashboard_tableSection__XUNmA {
+    border-radius: var(--radius-lg);
+  }
+
+  .AdminDashboard_tableHeaderBar__x6Ti8 {
+    padding: var(--space-4);
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .AdminDashboard_tableControlsRight__oA17t {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .AdminDashboard_tableSearchBox__yl1ZL {
+    min-width: 100%;
+  }
+
+  .AdminDashboard_userTable__cFV4x th,
+  .AdminDashboard_userTable__cFV4x td {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+/* SMALL MOBILE (< 400px) */
+@media (max-width: 399px) {
+  .AdminDashboard_sidebar__lbspw {
+    width: 90vw;
+  }
+  .AdminDashboard_welcomeText__B1acq h1 {
+    font-size: var(--font-size-lg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Loading Screen
+   -------------------------------------------------------------------------- */
+.AdminDashboard_loadingScreen__D0vVk {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-background);
+  gap: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.AdminDashboard_loadingSpinner__OtJdg {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: AdminDashboard_spin__DJhsD 0.8s linear infinite;
+}
+
+@keyframes AdminDashboard_spin__DJhsD {
+  to { transform: rotate(360deg); }
+}
+

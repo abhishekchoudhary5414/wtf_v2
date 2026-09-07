@@ -27,8 +27,8 @@ services:
         condition: service_healthy
     command: -connectRetries=60 -url=jdbc:postgresql://postgres:5432/wtf_db -user=postgres -password=postgres migrate
     volumes:
-      - ./backend/migrations:/flyway/sql:ro
-      - ./backend/flyway.conf:/flyway/conf/flyway.conf:ro
+      - ./backend/flyway_starter/migrations:/flyway/sql:ro
+      - ./backend/flyway_starter/flyway.conf:/flyway/conf/flyway.conf:ro
 
   backend:
     build:

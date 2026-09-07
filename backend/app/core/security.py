@@ -26,7 +26,7 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
 
 def create_access_token(
     subject: Union[str, Any],
-    role: str = "student",
+    role_id: Optional[int] = None,
     expires_delta: Optional[timedelta] = None
 ) -> str:
     """
@@ -39,10 +39,12 @@ def create_access_token(
     
     to_encode = {
         "sub": str(subject),
-        "role": role,
         "exp": expire,
         "iat": datetime.now(timezone.utc),
     }
+    # Include numeric role identifier when available
+    if role_id is not None:
+        to_encode["role_id"] = int(role_id)
     
     encoded_jwt = jwt.encode(
         to_encode,

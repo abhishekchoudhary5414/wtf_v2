@@ -1,7 +1,9 @@
 """
 Admin authentication endpoints (login, dashboard).
+Protected by JWT tokens.
 """
-from datetime import datetime, timedelta, timezone
+
+from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
@@ -9,13 +11,15 @@ from app.schemas.auth import AdminLoginRequest, AdminTokenResponse, AdminDetails
 from app.models.admin import AdminLogin, AdminDetails
 from app.core.security import verify_password, create_access_token
 from app.config import settings
-from app.api.deps import security_scheme
+from app.api.deps import get_current_admin
 
 router = APIRouter(prefix="/admin", tags=["Admin"])
 
-
 @router.post("/login", response_model=AdminTokenResponse)
 def admin_login(data: AdminLoginRequest, db: Session = Depends(get_db)):
+    """
+    Authenticate administrator credentials and issue a signed admin JWT bearer token.
+    """
     entry = db.query(AdminLogin).filter(AdminLogin.email_id == data.email.lower()).first()
     if not entry or not verify_password(data.password, entry.password_hash):
         raise HTTPException(
@@ -24,18 +28,27 @@ def admin_login(data: AdminLoginRequest, db: Session = Depends(get_db)):
             headers={"WWW-Authenticate": "Bearer"},
         )
 
-    if not entry.is_active:
-        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Admin account is inactive")
+    if not entry.is_active or entry.is_locked:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Admin account is inactive or locked",
+        )
 
-    # create token with subject = admin_login.id and role=admin
-    access_token = create_access_token(subject=str(entry.id), role="admin")
+    # Load admin details to obtain the numeric role id
+    admin = db.query(AdminDetails).filter(AdminDetails.id == entry.admin_id).first()
+    if not admin:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Admin details not found for this account",
+        )
 
-    # update last_login
+    # Issue JWT token with subject = admin_login.id and include numeric role_id
+    access_token = create_access_token(subject=str(entry.id), role_id=admin.role_id)
+
+    # Update last login timestamp
     entry.last_login = datetime.now(timezone.utc)
     entry.failed_login_attempts = 0
     db.commit()
-
-    admin = db.query(AdminDetails).filter(AdminDetails.id == entry.admin_id).first()
 
     return AdminTokenResponse(
         access_token=access_token,
@@ -44,28 +57,12 @@ def admin_login(data: AdminLoginRequest, db: Session = Depends(get_db)):
         admin=admin,
     )
 
-
 @router.get("/dashboard", response_model=AdminDetailsResponse)
-def admin_dashboard(credentials=Depends(security_scheme), db: Session = Depends(get_db)):
-    from app.core.security import decode_access_token
-
-    token = credentials.credentials
-    payload = decode_access_token(token)
-    if not payload or payload.get("role") != "admin":
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
-
-    subject = payload.get("sub")
-    try:
-        admin_login_id = int(subject)
-        entry = db.query(AdminLogin).filter(AdminLogin.id == admin_login_id).first()
-    except Exception:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token subject")
-
-    if not entry:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Admin not found")
-
-    admin = db.query(AdminDetails).filter(AdminDetails.id == entry.admin_id).first()
-    if not admin:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Admin details not found")
-
-    return admin
+def admin_dashboard(
+    current_admin: AdminDetails = Depends(get_current_admin),
+):
+    """
+    Retrieve authenticated admin profile.
+    Guarded by admin JWT authentication.
+    """
+    return current_admin
