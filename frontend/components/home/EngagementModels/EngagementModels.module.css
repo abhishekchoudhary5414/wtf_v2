@@ -1,0 +1,250 @@
+.engagementSection {
+  background-color: var(--color-background-soft);
+  position: relative;
+}
+
+.modelsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+.modelCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.modelCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.numberBadge {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  background-color: var(--color-primary-subtle);
+  border: 1px solid var(--color-border);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audienceBadge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-dark);
+  background-color: var(--color-background-alt);
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+.titleArea {
+  margin-bottom: var(--space-5);
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--color-primary-subtle) 0%, var(--color-surface) 100%);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.iconCircle svg {
+  font-size: 1.6rem;
+}
+
+.modelTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+}
+
+.modelSubtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-base);
+}
+
+/* Built For Tags */
+.targetSection {
+  margin-bottom: var(--space-5);
+}
+
+.targetLabel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.tagsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.tag {
+  font-size: 0.72rem;
+  background-color: var(--color-background-alt);
+  color: var(--color-text);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* Workflow Timeline Box */
+.workflowBox {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.workflowLabel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+
+.stepsTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.stepRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.stepNum {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.stepText {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  line-height: var(--line-height-snug);
+}
+
+/* Scope Box */
+.scopeBox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  background-color: var(--color-primary-subtle);
+  border: 1px solid var(--color-border);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-5);
+}
+
+.scopeIcon {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.scopeText {
+  font-size: 0.72rem;
+  color: var(--color-primary-dark);
+  line-height: var(--line-height-base);
+  margin: 0;
+}
+
+/* Benefits Checklist */
+.benefitsSection {
+  margin-bottom: var(--space-6);
+  flex-grow: 1;
+}
+
+.benefitsHeading {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-heading);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-3);
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-snug);
+}
+
+.checkIcon {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.cardAction {
+  margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+  .modelsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}

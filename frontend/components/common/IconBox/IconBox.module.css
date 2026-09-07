@@ -1,0 +1,87 @@
+.iconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+  transition: all var(--transition-base);
+}
+
+/* Sizes */
+.sm {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+}
+
+.sm svg {
+  font-size: 1.1rem;
+}
+
+.md {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+}
+
+.md svg {
+  font-size: 1.4rem;
+}
+
+.lg {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+}
+
+.lg svg {
+  font-size: 1.8rem;
+}
+
+.xl {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xl);
+}
+
+.xl svg {
+  font-size: 2.3rem;
+}
+
+/* Variants */
+.subtle {
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  box-shadow: 0 4px 12px var(--color-primary-glow);
+}
+
+.surface {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.white {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-card);
+}
+
+.warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+  border: 1px solid rgba(194, 120, 3, 0.2);
+}
+
+.danger {
+  background-color: var(--color-danger-subtle);
+  color: var(--color-danger);
+  border: 1px solid rgba(199, 54, 54, 0.2);
+}

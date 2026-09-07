@@ -1,0 +1,349 @@
+.curriculumSection {
+  background-color: var(--color-background-soft);
+  position: relative;
+}
+
+/* Milestone Progression Bar */
+.milestoneBarCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-8);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-6);
+}
+
+.milestoneHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.milestoneIcon {
+  color: var(--color-warning);
+  font-size: 1.3rem;
+}
+
+.milestoneHeading {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.milestoneTrack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+
+.milestoneNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 100px;
+}
+
+.milestoneWeek {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-subtle);
+  border: 1px solid var(--color-primary-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-1);
+}
+
+.milestoneLabel {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.trackLine {
+  flex: 1;
+  height: 2px;
+  background-color: var(--color-border);
+  min-width: 24px;
+  margin: 0 var(--space-2);
+  position: relative;
+  top: -10px;
+}
+
+/* Universal Closed-Loop Cycle Banner */
+.cycleBanner {
+  background: linear-gradient(135deg, var(--color-primary-subtle) 0%, #ffffff 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.cycleTitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.04em;
+}
+
+.cycleFlow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.cycleStep {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-heading);
+}
+
+.cycleIcon {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.cycleArrow {
+  font-size: 0.85rem;
+  color: var(--color-primary-light);
+}
+
+.cyclePill {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Phase Tabs */
+.phaseTabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+
+.phaseTabBtn {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.phaseTabBtn:hover {
+  border-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.phaseTabBtnActive {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+/* Weeks Grid */
+.weeksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-10);
+}
+
+.weekCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.weekCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.weekCardExpanded {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 16px var(--color-primary-glow);
+}
+
+.milestoneWeekCard {
+  border-top: 3px solid var(--color-warning);
+}
+
+.weekCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.weekBadgeArea {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.weekNumberPill {
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.milestoneBadge {
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-warning);
+  background-color: var(--color-warning-bg);
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.milestoneBadge svg {
+  font-size: 0.75rem;
+}
+
+.domainTag {
+  font-size: 0.65rem;
+  color: var(--color-text-light);
+  font-weight: var(--font-weight-medium);
+}
+
+.weekTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+  line-height: 1.3;
+}
+
+.weekObjective {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: var(--line-height-snug);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+}
+
+.weeklyCycleDetails {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.cycleDetailRow {
+  display: flex;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  gap: 4px;
+}
+
+.cycleDetailKey {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  flex-shrink: 0;
+}
+
+.cycleDetailVal {
+  color: var(--color-text);
+}
+
+.weekCardFooter {
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--color-border-subtle);
+}
+
+.viewCyclePrompt {
+  font-size: 0.68rem;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Disclaimer Box */
+.disclaimerBox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+}
+
+.infoIcon {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.disclaimerContent {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.disclaimerContent strong {
+  color: var(--color-text-heading);
+}
+
+@media (max-width: 1200px) {
+  .weeksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .weeksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cycleBanner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

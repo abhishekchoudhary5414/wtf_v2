@@ -1,0 +1,102 @@
+import { EngagementModelData } from '@/types';
+
+export const ENGAGEMENT_MODELS: EngagementModelData[] = [
+  {
+    id: 'institution-partnership',
+    number: '01',
+    title: 'Institution Partnership',
+    subtitle: 'Comprehensive campus and organizational deployment with centralized controls',
+    badge: 'Enterprise & Academic',
+    targetAudience: [
+      'Colleges & Universities',
+      'K-12 School Districts',
+      'Athletic & Sports Academies',
+      'Private Corporations',
+      'Government & Municipal Entities',
+    ],
+    workflowSteps: [
+      'Institution Onboarding & Portal Setup',
+      'Staff & Counselor Account Provisioning',
+      'Cohorted Student Onboarding',
+      'Baseline Behavioral Assessment',
+      'WTF Professional Review & Support',
+      '16-Week Curriculum or Therapy Track',
+    ],
+    scopeStatement:
+      'Empowers institutional leadership to deploy a structured, compliant wellness initiative with full visibility into aggregate population trends without violating individual student privacy.',
+    benefits: [
+      'Centralized student & roster management',
+      'Role-based staff & counselor access controls',
+      'Aggregate cohort reporting & audit files',
+      'Guaranteed access to vetted WTF clinical provider network',
+      'Streamlined professional escalation pathways',
+      'Turnkey 16-week evidence-informed wellness curriculum',
+    ],
+    ctaLabel: 'Partner with WTF',
+    iconName: 'CorporateFareOutlined',
+  },
+  {
+    id: 'certified-life-coach',
+    number: '02',
+    title: 'Certified Life Coach',
+    subtitle: 'Structured coaching pathway with clinical supervision and safe escalation',
+    badge: 'Coaching & Mentorship',
+    targetAudience: [
+      'Independent Wellness Coaches',
+      'Student Mentors & Academic Advisors',
+      'Youth & Sports Performance Coaches',
+      'Behavioral Intervention Specialists',
+    ],
+    workflowSteps: [
+      'Life Coach Signup & Credential Review',
+      'WTF Behavioral Wellness Certification',
+      'Direct Student Roster Onboarding',
+      'Coached Assessment Administration',
+      '16-Week Guided Curriculum Facilitation',
+      'Professional Supervision & Clinical Escalation',
+    ],
+    scopeStatement:
+      'WTF certification creates a structured pathway for coaches. Crucially, any clinical concerns falling outside the non-clinical coaching scope are immediately routed to WTF in-house licensed providers.',
+    benefits: [
+      'Official WTF Behavioral Coaching Certification pathway',
+      'Dedicated coach dashboard for multi-student management',
+      'Regular clinical supervision and guidance from licensed providers',
+      'Instant clinical escalation button for high-risk flags',
+      'Access to broader WTF institutional referrals upon certification',
+    ],
+    ctaLabel: 'Apply for Certification',
+    iconName: 'WorkspacePremiumOutlined',
+  },
+  {
+    id: 'direct-student',
+    number: '03',
+    title: 'Direct Student / Patient',
+    subtitle: 'Self-guided or assisted behavioral journey with on-demand clinical safety net',
+    badge: 'Direct Access',
+    targetAudience: [
+      'University & College Students',
+      'Young Adults Seeking Structure',
+      'Individuals Navigating Stress & Anxiety',
+      'Self-Referred Wellness Journeyers',
+    ],
+    workflowSteps: [
+      'Self-Directed Secure Signup',
+      'Comprehensive Initial Assessment',
+      'WTF Provider Review & Pathway Plan',
+      'Interactive 16-Week Curriculum / Therapy',
+      'Ongoing Tracking & Milestone Check-Ins',
+    ],
+    scopeStatement:
+      'Provides a safe, confidential environment where students can reflect honestly, complete adaptive assessments, and instantly unlock licensed therapy when needed.',
+    benefits: [
+      'Immediate direct access to the WTF platform',
+      'AI-assisted clinically structured assessments',
+      'Dedicated life coach support throughout each module',
+      'Engaging 16-week chapter-based learning journey',
+      'Seamless transition to licensed telehealth therapy sessions',
+      'Personalized avatar, progress tracking, and streaks',
+    ],
+    ctaLabel: 'Start Your Journey',
+    iconName: 'PsychologyAltOutlined',
+  },
+];

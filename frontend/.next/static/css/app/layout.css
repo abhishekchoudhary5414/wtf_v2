@@ -1,0 +1,285 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/* ==========================================================================
+   WTF UNIVERSITY — GLOBAL DESIGN TOKENS & STYLES
+   Theme: Light-Green Mental & Behavioral Wellness SaaS
+   ========================================================================== */
+
+:root {
+  /* Primary Green Wellness Palette */
+  --color-primary: #1e7048;
+  --color-primary-hover: #165838;
+  --color-primary-active: #0f4229;
+  --color-primary-dark: #0d3822;
+  --color-primary-light: #2c9a66;
+  --color-primary-subtle: #eaf5ee;
+  --color-primary-tint: #f2f9f5;
+  --color-primary-glow: rgba(30, 112, 72, 0.12);
+
+  /* Secondary & Supporting Green Accents */
+  --color-secondary: #275e47;
+  --color-secondary-light: #44896b;
+  --color-secondary-subtle: #edf6f1;
+
+  /* Neutrals & Surfaces */
+  --color-background: #f7faf8;
+  --color-background-alt: #edf5f0;
+  --color-background-soft: #fbfdfc;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f5f9f6;
+  --color-surface-card: #ffffff;
+  --color-surface-elevated: #ffffff;
+
+  /* Typography Colors */
+  --color-text: #1a2f24;
+  --color-text-heading: #0d281a;
+  --color-text-muted: #557061;
+  --color-text-light: #7e998b;
+  --color-text-inverse: #ffffff;
+
+  /* Borders & Dividers */
+  --color-border: #d4e5db;
+  --color-border-subtle: #e5f0e9;
+  --color-border-focus: #1e7048;
+
+  /* Status Colors */
+  --color-success: #198754;
+  --color-success-bg: #e8f7ee;
+  --color-warning: #c27803;
+  --color-warning-bg: #fdf5e6;
+  --color-danger: #c73636;
+  --color-danger-subtle: #fdeded;
+  --color-danger-hover: #a82424;
+  --color-info: #1a73e8;
+  --color-info-bg: #e8f0fe;
+
+  /* Typography Scale */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.125rem;    /* 18px */
+  --font-size-lg: 1.25rem;     /* 20px */
+  --font-size-xl: 1.5rem;      /* 24px */
+  --font-size-2xl: 1.875rem;   /* 30px */
+  --font-size-3xl: 2.25rem;    /* 36px */
+  --font-size-4xl: 3rem;       /* 48px */
+  --font-size-5xl: 3.75rem;    /* 60px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.15;
+  --line-height-snug: 1.3;
+  --line-height-base: 1.55;
+  --line-height-relaxed: 1.7;
+
+  /* Spacing Tokens */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Soft Green-Tinted Shadows */
+  --shadow-xs: 0 1px 3px rgba(13, 40, 26, 0.04);
+  --shadow-sm: 0 2px 8px rgba(13, 40, 26, 0.05);
+  --shadow-md: 0 6px 20px rgba(13, 40, 26, 0.06);
+  --shadow-lg: 0 12px 36px rgba(13, 40, 26, 0.08);
+  --shadow-xl: 0 20px 48px rgba(13, 40, 26, 0.1);
+  --shadow-card: 0 4px 16px rgba(15, 45, 30, 0.05);
+  --shadow-card-hover: 0 12px 28px rgba(15, 45, 30, 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout Max Widths */
+  --container-max-width: 1240px;
+  --container-wide: 1360px;
+  --container-narrow: 840px;
+}
+
+/* ==========================================================================
+   CSS Reset & Base Rules
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-heading);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.2rem, 5vw, var(--font-size-5xl)); }
+h2 { font-size: clamp(1.8rem, 3.5vw, var(--font-size-3xl)); }
+h3 { font-size: clamp(1.3rem, 2.5vw, var(--font-size-2xl)); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+p {
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   Global Utility Classes
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.containerNarrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.sectionPadding {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+.sectionPaddingSm {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.bgAlt {
+  background-color: var(--color-background-alt);
+}
+
+.bgSoft {
+  background-color: var(--color-background-soft);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionPadding {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+

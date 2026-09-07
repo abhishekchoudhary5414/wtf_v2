@@ -1,0 +1,279 @@
+.problemSection {
+  background-color: var(--color-background-soft);
+  position: relative;
+}
+
+.problemsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.problemCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+}
+
+.problemCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary-light);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.iconBox {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+  border: 1px solid rgba(194, 120, 3, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBox svg {
+  font-size: 1.5rem;
+}
+
+.categoryBadge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-warning);
+  background-color: var(--color-warning-bg);
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+.problemTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-3);
+}
+
+.problemDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-5);
+  flex-grow: 1;
+}
+
+.riskBox {
+  background-color: var(--color-danger-subtle);
+  border-left: 3px solid var(--color-danger);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: var(--space-4);
+}
+
+.riskLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-danger);
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.riskText {
+  font-size: var(--font-size-xs);
+  color: #7a1d1d;
+  line-height: var(--line-height-base);
+  margin: 0;
+}
+
+.solutionBox {
+  background-color: var(--color-primary-subtle);
+  border-left: 3px solid var(--color-primary);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.solutionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-bottom: 2px;
+}
+
+.solutionIcon {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+}
+
+.solutionLabel {
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  letter-spacing: 0.04em;
+}
+
+.solutionText {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-dark);
+  line-height: var(--line-height-base);
+  margin: 0;
+}
+
+/* Transformation Banner */
+.transformationBanner {
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-primary-subtle) 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-8);
+  box-shadow: var(--shadow-md);
+}
+
+.transformInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.transformSideLeft,
+.transformSideRight {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 260px;
+}
+
+.transformStatusDotRed {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-danger);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.transformStatusDotGreen {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-glow);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.transformTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.transformTag {
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-danger);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.transformTagGreen {
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.transformTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: 2px;
+}
+
+.transformTitleGreen {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  margin-bottom: 2px;
+}
+
+.transformSub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.transformSubGreen {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-dark);
+}
+
+.transformArrowWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.transformArrowCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px var(--color-primary-glow);
+}
+
+.transformArrowCircle svg {
+  font-size: 1.4rem;
+}
+
+.transformPill {
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 900px) {
+  .problemsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .transformationBanner {
+    padding: var(--space-5);
+  }
+
+  .transformArrowWrap {
+    transform: rotate(90deg);
+    margin: var(--space-4) auto;
+  }
+
+  .transformPill {
+    transform: rotate(-90deg);
+  }
+}

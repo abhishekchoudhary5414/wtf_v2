@@ -1,0 +1,351 @@
+.avatarSection {
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophyCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+}
+
+.philosophyTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+}
+
+.philosophyDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-5);
+}
+
+.principlesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.principleItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+}
+
+.principleItem strong {
+  color: var(--color-text-heading);
+}
+
+.checkIcon {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* Right Column: Profile Mockup Card */
+.rightCol {
+  display: flex;
+  justify-content: center;
+}
+
+.profileMockupCard {
+  width: 100%;
+  max-width: 560px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Profile Header */
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.avatarVisual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.avatarCircle {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary-subtle) 0%, #ffffff 100%);
+  border: 2px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
+}
+
+.avatarIcon {
+  font-size: 2.5rem;
+}
+
+.levelBadge {
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+}
+
+.profileMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileNameRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: 2px;
+}
+
+.studentName {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.statusPill {
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-success);
+  background-color: var(--color-success-bg);
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+}
+
+.cohortTag {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.quickStatsRow {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.qStat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.fireIcon {
+  color: #f97316;
+  font-size: 1rem;
+}
+
+.trophyIcon {
+  color: var(--color-warning);
+  font-size: 1rem;
+}
+
+/* Progress Module */
+.progressModule {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+.progressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.progressTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.bookIcon {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.progressPct {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.progressBarTrack {
+  height: 8px;
+  background-color: var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  border-radius: var(--radius-full);
+}
+
+.progressSubtext {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+/* Support Team Module */
+.supportTeamModule {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.teamHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.teamIcon {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.teamHeading {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-heading);
+  letter-spacing: 0.04em;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.teamMemberCard {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.memberAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.memberAvatarClinician {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-bold);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.memberName {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1.2;
+}
+
+.memberRole {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+}
+
+.memberTouch {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Footer note */
+.profileFooter {
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--color-border);
+}
+
+.footerNote {
+  font-size: 0.72rem;
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}

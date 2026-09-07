@@ -1,0 +1,214 @@
+.benefitsSection {
+  background-color: var(--color-background-soft);
+  position: relative;
+}
+
+/* Tabs */
+.tabsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+
+.tabBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.tabBtn:hover {
+  background-color: var(--color-primary-subtle);
+  border-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.tabBtnActive {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
+}
+
+.tabIcon {
+  display: flex;
+  align-items: center;
+}
+
+.tabIcon svg {
+  font-size: 1.15rem;
+}
+
+/* Benefit Display Card */
+.benefitDisplayCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefitDisplayInner {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.benefitContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.audienceTagRow {
+  margin-bottom: var(--space-3);
+}
+
+.audienceBadge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: var(--color-primary-subtle);
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+}
+
+.benefitHeadline {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: var(--line-height-snug);
+  margin-bottom: var(--space-3);
+}
+
+.benefitSub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.checkIcon {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.bTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: 2px;
+}
+
+.bDesc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: var(--line-height-snug);
+  margin: 0;
+}
+
+/* Metric Callout Card */
+.metricCallout {
+  display: flex;
+  justify-content: center;
+}
+
+.metricCardInner {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-primary-subtle) 0%, #ffffff 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.metricIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.metricIconWrap svg {
+  font-size: 1.6rem;
+}
+
+.metricStat {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.metricLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  line-height: var(--line-height-snug);
+  margin-bottom: var(--space-4);
+  max-width: 240px;
+}
+
+.metricAuditBadge {
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-dark);
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+@media (max-width: 1024px) {
+  .benefitDisplayInner {
+    grid-template-columns: 1fr;
+  }
+
+  .tabsContainer {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}

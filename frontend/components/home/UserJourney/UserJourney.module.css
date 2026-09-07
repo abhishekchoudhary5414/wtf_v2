@@ -1,0 +1,244 @@
+.journeySection {
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.journeyLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: flex-start;
+}
+
+/* Left Chain */
+.chainCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.chainNode {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.chainNode:hover {
+  border-color: var(--color-primary-light);
+  transform: translateX(4px);
+}
+
+.chainNodeActive {
+  background-color: var(--color-primary-subtle);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 14px var(--color-primary-glow);
+}
+
+.chainNodePast {
+  background-color: var(--color-background-soft);
+  border-color: var(--color-border-subtle);
+}
+
+.nodeStepBadge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.chainNodeActive .nodeStepBadge {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+.nodeTextCol {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.nodeTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.nodeCategory {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+}
+
+.activePill {
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.arrowWrap {
+  display: flex;
+  justify-content: center;
+  padding: 2px 0;
+}
+
+.downArrow {
+  font-size: 1.1rem;
+  color: var(--color-primary-light);
+  opacity: 0.7;
+}
+
+/* Right Sticky Inspector */
+.inspectorCol {
+  position: sticky;
+  top: 100px;
+}
+
+.stickyInspector {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-xl);
+}
+
+.inspectorHeader {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border-subtle);
+  margin-bottom: var(--space-6);
+}
+
+.phaseStepNum {
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.phaseTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: 2px;
+}
+
+.phaseCategory {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.inspectorBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.inspectorRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.rowLabel {
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  letter-spacing: 0.04em;
+}
+
+.actorBadge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-subtle);
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-sm);
+  width: fit-content;
+  border: 1px solid var(--color-border);
+}
+
+.payloadBox {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.payloadBox p {
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+  margin: 0;
+}
+
+.safetyRuleBox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  background-color: var(--color-primary-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.ruleIcon {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.safetyRuleBox p {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-dark);
+  line-height: var(--line-height-snug);
+  margin: 0;
+}
+
+.inspectorFooter {
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--color-border);
+}
+
+.footerStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.72rem;
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-medium);
+}
+
+.statusIcon {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+@media (max-width: 960px) {
+  .journeyLayout {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .inspectorCol {
+    position: static;
+  }
+}

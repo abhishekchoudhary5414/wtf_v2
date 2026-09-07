@@ -1,0 +1,328 @@
+.footer {
+  background-color: var(--color-background-alt);
+  border-top: 1px solid var(--color-border);
+  position: relative;
+}
+
+/* 988 Safety & Crisis Lifeline Banner */
+.crisisBanner {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-inverse);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.crisisBannerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.crisisInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+  min-width: 300px;
+}
+
+.crisisIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #a8e6cf;
+}
+
+.crisisTitle {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-inverse);
+  margin-bottom: var(--space-1);
+}
+
+.crisisText {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: var(--line-height-base);
+  margin: 0;
+}
+
+.crisisText strong {
+  color: #ffffff;
+  font-weight: var(--font-weight-bold);
+}
+
+.crisisActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.crisisCallBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background-color: #ffffff;
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.crisisCallBtn:hover {
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.crisisTextBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.crisisTextBtn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+/* Main Footer */
+.mainFooter {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  margin-bottom: var(--space-4);
+}
+
+.logoBadge {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1.2;
+}
+
+.brandTagline {
+  font-size: 0.65rem;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.brandBio {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+  max-width: 360px;
+}
+
+.complianceBadges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.complianceItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-medium);
+}
+
+.badgeIcon {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+/* Nav Columns */
+.navCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.navTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.01em;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footerLink {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footerLink:hover {
+  color: var(--color-primary);
+}
+
+/* Clinical Disclaimer Section */
+.disclaimerSection {
+  margin-bottom: var(--space-8);
+}
+
+.disclaimerBox {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+}
+
+.disclaimerTitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.disclaimerText {
+  font-size: 0.72rem;
+  color: var(--color-text-light);
+  line-height: var(--line-height-base);
+  margin-bottom: var(--space-2);
+}
+
+.disclaimerText:last-child {
+  margin-bottom: 0;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.copyright {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.legalLink:hover {
+  color: var(--color-primary);
+}
+
+.legalDot {
+  color: var(--color-border);
+  font-size: var(--font-size-xs);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .brandCol {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brandCol {
+    grid-column: span 1;
+  }
+
+  .crisisBannerInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .crisisActions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

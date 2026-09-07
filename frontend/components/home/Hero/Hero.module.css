@@ -1,0 +1,408 @@
+.heroSection {
+  position: relative;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-20);
+  background: radial-gradient(circle at 10% 20%, rgba(234, 245, 238, 0.8) 0%, rgba(247, 250, 248, 1) 60%);
+  overflow: hidden;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+/* Left Content */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px var(--space-4);
+  background-color: var(--color-primary-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-5);
+  width: fit-content;
+}
+
+.badgeIcon {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+}
+
+.heroHeadline {
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-5);
+}
+
+.gradientText {
+  color: var(--color-primary);
+  position: relative;
+}
+
+.heroSubtext {
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 600px;
+}
+
+.heroCtaGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.primaryCta {
+  box-shadow: 0 4px 18px var(--color-primary-glow);
+}
+
+.heroReassurances {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+  flex-wrap: wrap;
+}
+
+.reassuranceItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.checkIcon {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+/* Quick Metrics Bar */
+.metricsBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+.metricItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.metricIconWrap {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.metricValue {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  line-height: 1.2;
+}
+
+.metricLabel {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.metricDivider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--color-border);
+}
+
+/* Right Visual: Ecosystem Card */
+.heroVisual {
+  display: flex;
+  justify-content: center;
+}
+
+.ecosystemCard {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+}
+
+.ecosystemHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.ecosystemPulseBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(30, 112, 72, 0.2);
+}
+
+.ecosystemTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.ecosystemStatusNote {
+  font-size: 0.72rem;
+  color: var(--color-text-light);
+}
+
+/* Flow Node List */
+.flowList {
+  display: flex;
+  flex-direction: column;
+}
+
+.flowNode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-wrap: wrap;
+}
+
+.flowNode:hover {
+  border-color: var(--color-primary-light);
+  background-color: var(--color-primary-subtle);
+  transform: translateX(2px);
+}
+
+.flowNodeActive {
+  background-color: var(--color-primary-subtle);
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px var(--color-primary-glow);
+}
+
+.nodeLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.nodeStep {
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-light);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.nodeIconWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nodeIconWrap svg {
+  font-size: 1.1rem;
+}
+
+.nodeMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.nodeTitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.nodeRole {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+}
+
+.nodeRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.nodeBadge {
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-medium);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary-dark);
+}
+
+.nodeActiveIcon {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+.nodeActiveIcon svg {
+  font-size: 1.1rem;
+}
+
+.nodeExpandedDetail {
+  width: 100%;
+  padding-top: var(--space-2);
+  margin-top: var(--space-2);
+  border-top: 1px dashed var(--color-border);
+}
+
+.nodeExpandedDetail p {
+  font-size: 0.72rem;
+  color: var(--color-primary-dark);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.flowConnector {
+  display: flex;
+  justify-content: center;
+  padding: 2px 0;
+}
+
+.connectorArrow {
+  font-size: 0.95rem;
+  color: var(--color-primary-light);
+  opacity: 0.8;
+}
+
+/* Ecosystem Card Footer */
+.ecosystemFooter {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.guaranteePill {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--color-primary-subtle);
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 0.72rem;
+  color: var(--color-primary-dark);
+  font-weight: var(--font-weight-medium);
+}
+
+.shieldIcon {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .heroSubtext {
+    max-width: 100%;
+  }
+
+  .ecosystemCard {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroSection {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-12);
+  }
+
+  .heroCtaGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    width: 100%;
+  }
+
+  .metricsBar {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .metricDivider {
+    display: none;
+  }
+}

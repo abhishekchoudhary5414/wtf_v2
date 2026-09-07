@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: wtf_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: wtf_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d wtf_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  flyway:
+    image: flyway/flyway:latest
+    container_name: wtf_flyway
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: -connectRetries=60 -url=jdbc:postgresql://postgres:5432/wtf_db -user=postgres -password=postgres migrate
+    volumes:
+      - ./backend/migrations:/flyway/sql:ro
+      - ./backend/flyway.conf:/flyway/conf/flyway.conf:ro
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: wtf_backend
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      flyway:
+        condition: service_completed_successfully
+    env_file:
+      - ./backend/.env
+    environment:
+      - DATABASE_URL=postgresql+psycopg://postgres:postgres@postgres:5432/wtf_db
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: wtf_frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      - NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:
+

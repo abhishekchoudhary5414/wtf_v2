@@ -1,0 +1,302 @@
+.crisisSection {
+  background-color: var(--color-background-soft);
+  position: relative;
+}
+
+/* 3-Stage Crisis Workflow Banner */
+.workflowBanner {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-10);
+}
+
+.workflowStage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.stageIconWrapWarning {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.stageIconWrapSafety {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.stageIconWrapEmergency {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-danger-subtle);
+  color: var(--color-danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.stageIconWrapWarning svg,
+.stageIconWrapSafety svg,
+.stageIconWrapEmergency svg {
+  font-size: 1.8rem;
+}
+
+.stageNumber {
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.stageTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+}
+
+.stageDesc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-snug);
+  max-width: 260px;
+  margin: 0;
+}
+
+.stageArrow {
+  color: var(--color-primary-light);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Calm, Prominent Emergency Resource Card */
+.resourceCard {
+  background-color: var(--color-surface);
+  border: 2px solid #f0d0d0;
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.emergencyPill {
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-danger);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+
+.cardHeading {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+}
+
+.nonEmergencyBadge {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+  background-color: var(--color-danger-subtle);
+  border: 1px solid rgba(199, 54, 54, 0.25);
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cardIntro {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+/* 3 Resources Grid */
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.resourceItem {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+}
+
+.resIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.resIconBox svg {
+  font-size: 1.4rem;
+}
+
+.resContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.resName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
+}
+
+.resDesc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-snug);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+}
+
+.resActionBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.resActionBtnPrimary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-text-inverse);
+}
+
+.resActionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface);
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.resActionBtn:hover {
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary-dark);
+}
+
+.resActionBtnDanger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-danger);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.resActionBtnDanger:hover {
+  background-color: var(--color-danger-hover);
+  color: var(--color-text-inverse);
+}
+
+.safetyGuarantees {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--color-border);
+}
+
+.guaranteeItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.guaranteeCheck {
+  font-size: 1.05rem;
+  color: var(--color-primary);
+}
+
+@media (max-width: 960px) {
+  .workflowBanner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stageArrow {
+    transform: rotate(90deg);
+  }
+
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+  }
+}
